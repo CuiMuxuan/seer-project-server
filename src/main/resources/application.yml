@@ -1,0 +1,79 @@
+server:
+#  开启端口,填入端口号
+  port: 
+spring:
+  profiles:
+#    默认开发环境dev,可选生产环境prod
+    active: dev
+  application:
+    name: seer-project-server
+  cache:
+    redis:
+      cache-null-values: false
+    type: redis
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-test-query: SELECT 1
+      idle-timeout: 300000
+      leak-detection-threshold: 60000
+      max-lifetime: 480000
+      maximum-pool-size: 8
+      minimum-idle: 2
+      keepalive-time: 240000
+    #MySQL连接的url、密码、用户名
+    password: 
+    url: 
+    username: 
+  #file-storage的配置，参考https://gitee.com/dromara/x-file-storage，本项目使用七牛云对象存储
+  file-storage:
+    default-platform: 
+    qiniu-kodo:
+      - platform: 
+        enable-storage: 
+        access-key: 
+        secret-key: 
+        domain: 
+        bucket-name: 
+        base-path: 
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  data:
+    redis:
+      #redis缓存的url
+      host: 
+      jedis:
+        pool:
+          max-active: 30
+          max-idle: 8
+          max-wait: -1
+          min-idle: 0
+      #redis缓存的密码
+      password: 
+      #redis缓存的端口号
+      port: 
+      timeout: 3000
+  servlet:
+    multipart:
+      max-file-size: 16MB
+      max-request-size: 128MB
+mybatis-flex:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    deleted-value-of-logic-delete: 1
+    normal-value-of-logic-delete: 0
+constant:
+  redis:
+    serviceIndex: 4
+    utilsIndex: 5
+  #自定义常量-验证码
+  auth: 
+#腾讯云第三方API的配置，参考https://cloud.tencent.com/document/api，本项目使用通用文字识别功能
+tencent:
+  secretId: 
+  secretKey: 
+springdoc:
+  packages-to-scan: cn.colorcollision.seerprojectserver.controller
