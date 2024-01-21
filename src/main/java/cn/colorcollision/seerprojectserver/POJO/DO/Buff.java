@@ -11,6 +11,7 @@ import java.util.Date;
 
 /**
  * 
+ * @author CuiMuxuan
  * @TableName buff
  */
 @Table(value = "buff")
@@ -121,23 +122,22 @@ public class Buff implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append(", property=").append(property);
-        sb.append(", object=").append(object);
-        sb.append(", rate=").append(rate);
-        sb.append(", type=").append(type);
-        sb.append(", meaning=").append(meaning);
-        sb.append(", isExclusive=").append(isExclusive);
-        sb.append(", isDelete=").append(isDelete);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", updateTime=").append(updateTime);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        String sb = getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", name=" + name +
+                ", property=" + property +
+                ", object=" + object +
+                ", rate=" + rate +
+                ", type=" + type +
+                ", meaning=" + meaning +
+                ", isExclusive=" + isExclusive +
+                ", isDelete=" + isDelete +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
+        return sb;
     }
 }

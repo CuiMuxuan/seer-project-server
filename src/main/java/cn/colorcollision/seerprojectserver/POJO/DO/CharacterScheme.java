@@ -1,14 +1,13 @@
 package cn.colorcollision.seerprojectserver.POJO.DO;
 
 import cn.colorcollision.seerprojectserver.POJO.DTO.CharacterSchemeDTO;
-import cn.colorcollision.seerprojectserver.POJO.entity.PanelValues;
 import com.alibaba.fastjson.JSON;
-import lombok.Data;
-import io.swagger.v3.oas.annotations.media.Schema;
 import com.mybatisflex.annotation.Column;
 import com.mybatisflex.annotation.Id;
 import com.mybatisflex.annotation.KeyType;
 import com.mybatisflex.annotation.Table;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 /**
  * 实体类。

@@ -1,14 +1,13 @@
 package cn.colorcollision.seerprojectserver.POJO.DO;
 
-import java.io.Serializable;
-import java.util.Date;
-
 import com.mybatisflex.annotation.Column;
 import com.mybatisflex.annotation.Id;
 import com.mybatisflex.annotation.KeyType;
 import com.mybatisflex.annotation.Table;
-import cn.colorcollision.seerprojectserver.POJO.DTO.CharacterSoulDTO;
 import lombok.Data;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 

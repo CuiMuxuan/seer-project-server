@@ -1,17 +1,17 @@
 package cn.colorcollision.seerprojectserver.POJO.DO;
 
+import cn.colorcollision.seerprojectserver.POJO.DTO.SoulDTO;
 import com.alibaba.fastjson2.JSON;
 import com.mybatisflex.annotation.Column;
 import com.mybatisflex.annotation.Id;
 import com.mybatisflex.annotation.Table;
-import cn.colorcollision.seerprojectserver.POJO.DTO.SoulDTO;
-import cn.colorcollision.seerprojectserver.util.PropertyUtil;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * @author CuiMuxuan
  * @TableName soul
  */
 @Table(value = "soul")
@@ -94,17 +94,16 @@ public class Soul implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", map=").append(map);
-        sb.append(", isDelete=").append(isDelete);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", updateTime=").append(updateTime);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        String sb = getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", map=" + map +
+                ", isDelete=" + isDelete +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
+        return sb;
     }
 }

@@ -3,8 +3,6 @@ package cn.colorcollision.seerprojectserver.POJO.entity;
 import com.alibaba.fastjson2.JSONObject;
 import lombok.Data;
 
-import java.util.HashMap;
-
 /**
  * @author 爻
  * @date 2023/9/16
